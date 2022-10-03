@@ -18,15 +18,18 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Poppins', sans-serif;
 }
 
-html{
-  overflow-x: hidden !important;
-}
 
 #mainTitle{
   max-width: 700px;
   font-weight: 800;
   letter-spacing: 0.1rem;
   overflow-wrap: break-word;
+}
+
+#mainTitle span{
+  background: -webkit-linear-gradient(blue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #subPara{
@@ -250,6 +253,30 @@ html{
   background: red;
 }
 
+/* YOUTUBE START */
+
+
+.videos {
+  background: ghostwhite;
+  padding: 1.3rem;
+}
+
+.videos .card {
+  background: ghostwhite;
+  border: none;
+}
+
+.videos .card .card-img-top {
+  width: 5rem;
+  height: 5rem;
+}
+
+.videos .card .card-footer {
+  background: ghostwhite;
+}
+
+/* Youtube end */
+
 .reviews{
   background: ghostwhite;
   padding: 1.3rem;
@@ -329,6 +356,9 @@ footer a{
 
 
 @media only screen and (min-width: 600px) {
+  *{
+    overflow-x: hidden;
+  }
   .stats .card{
     height: 12rem;
   }
@@ -336,8 +366,13 @@ footer a{
     padding-top: 4rem;
   }
   
-  .services .row .col{
-    
+  iframe{
+    width: 40vw;
+    height: 50vh;
+  }
+  
+  .videos .card{
+    max-width: 20rem;
   }
   
   .services .card{
@@ -356,10 +391,11 @@ footer a{
   
   .company .imageComp{
     padding: none;
-  
 }
 
 }
 
-/*special buttons*/
-
+iframe{
+  border: 2px solid white;
+  padding: 1.3rem;
+}
